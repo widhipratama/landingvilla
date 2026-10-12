@@ -23,6 +23,7 @@
       --dark-wood: #241b16;
       --olive: #59604a;
       --line: rgba(24, 23, 20, .18);
+      --photo-tone: saturate(.78) contrast(.88) brightness(1.025) sepia(.035);
       --pad: clamp(20px, 4.1vw, 72px);
       --section: clamp(88px, 12vw, 180px);
       --serif: "Instrument Serif", Georgia, serif;
@@ -56,6 +57,11 @@
     img {
       display: block;
       width: 100%;
+    }
+
+    main img,
+    .lightbox img {
+      filter: var(--photo-tone);
     }
 
     a {
@@ -370,7 +376,7 @@
       position: absolute;
       z-index: 1;
       inset: 0;
-      background: linear-gradient(90deg, rgba(12, 11, 9, .56) 0%, rgba(12, 11, 9, .21) 58%, rgba(12, 11, 9, .12) 100%);
+      background: linear-gradient(90deg, rgba(28, 22, 17, .48) 0%, rgba(28, 22, 17, .17) 58%, rgba(28, 22, 17, .08) 100%);
       content: "";
       pointer-events: none;
     }
@@ -1139,7 +1145,7 @@
       }
 
       .hero-media::after {
-        background: linear-gradient(0deg, rgba(12, 11, 9, .68) 0%, rgba(12, 11, 9, .18) 72%, rgba(12, 11, 9, .28) 100%);
+        background: linear-gradient(0deg, rgba(28, 22, 17, .58) 0%, rgba(28, 22, 17, .12) 72%, rgba(28, 22, 17, .2) 100%);
       }
 
       .hero-media img {
